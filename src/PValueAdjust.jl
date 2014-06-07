@@ -1,7 +1,8 @@
 module PValueAdjust
 
-export bonferroni
+export bonferroni, benjaminiHochberg
 
 include("bonferroni.jl")
+include("benjaminiHochberg.jl")
 
 end # module
