@@ -2,7 +2,7 @@ using Base.Test
 using PValueAdjust
 
 newPvalues = holm([0.05, 0.03, 0.01, 0.5])
-@test_approx_eq newPValues, [0.1, 0.09, 0.04, 0.5]
+@test_approx_eq newPValues [0.1, 0.09, 0.04, 0.5]
 
 @test all(holm([1,1,1]) .<= 1)
 
