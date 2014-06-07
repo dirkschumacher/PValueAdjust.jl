@@ -8,3 +8,5 @@ newPvalues = benjaminiHochberg([0.05, 0.03, 0.01, 0.5])
 
 @test_throws benjaminiHochberg([-1])
 @test_throws benjaminiHochberg([2])
+
+@test benjaminiHochberg([0.5]) == [0.5]

@@ -4,7 +4,7 @@ function benjaminiHochberg(pValues)
   end
   n = length(pValues)
   if n <= 1
-    return pvalues
+    return pValues
   end
   indexes = [1:n]
   sortedIndexes = sort(indexes, by = (i) -> pValues[i])
