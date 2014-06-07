@@ -9,5 +9,5 @@ before_install:
   - sudo apt-get update -qq -y
   - sudo apt-get install libpcre3-dev julia -y
 script:
-  - julia -e 'Pkg.init(); run(`ln -s $(pwd()) $(Pkg.dir("padjust"))`); Pkg.pin("padjust"); Pkg.resolve()'
-  - julia -e 'using padjust; @assert isdefined(:padjust); @assert typeof(padjust) === Module'
+  - julia -e 'Pkg.init(); run(`ln -s $(pwd()) $(Pkg.dir("PValueAdjust"))`); Pkg.pin("PValueAdjust"); Pkg.resolve()'
+  - julia -e 'using PValueAdjust; @assert isdefined(:PValueAdjust); @assert typeof(PValueAdjust) === Module'
