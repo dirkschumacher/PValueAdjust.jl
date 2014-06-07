@@ -2,6 +2,8 @@
 # PValueAdjust.jl
 Some methods to adjust p-values for multiple comparisons in Julia. All methods take a vector of p-values and return a vector with adjusted values.
 
+This is work in progress. I don't really know if that is actually a good api.
+
 ## Methods
 ### Bonferroni
 Controls the familywise error rate (FWER).
@@ -36,7 +38,16 @@ benjaminiHochberg([0.05, 0.03, 0.01, 0.5])
 # 0.5
 ```
 
-
+### Benjamini-Hochberg-Yekutieli
+Controls the false discovery rate (FDR).
+````jl
+benjaminiYekutieli([0.05, 0.03, 0.01, 0.5])
+#4-element Array{Float64,1}:
+# 0.138889 
+# 0.125    
+# 0.0833333
+# 1.0
+```
 ## References
 Benjamini, Y., and Hochberg, Y. (1995). Controlling the false discovery rate: a practical and powerful approach to multiple testing. Journal of the Royal Statistical Society Series B 57, 289–300.
 
