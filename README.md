@@ -3,7 +3,7 @@ Some methods to adjust p-values for multiple comparisons in Julia. All methods t
 
 ## Methods
 ### Bonferroni
-Controls the Familywise error rate (FWER).
+Controls the familywise error rate (FWER).
 ```jl
 bonferroni([0.05, 0.03, 0.05])
 # 4-element Array{Float64,1}:
@@ -11,5 +11,4 @@ bonferroni([0.05, 0.03, 0.05])
 # 0.12
 # 0.2 
 # 0.04
-#
 ```
