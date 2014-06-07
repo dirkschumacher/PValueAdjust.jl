@@ -11,3 +11,4 @@ before_install:
 script:
   - julia -e 'Pkg.init(); run(`ln -s $(pwd()) $(Pkg.dir("PValueAdjust"))`); Pkg.pin("PValueAdjust"); Pkg.resolve()'
   - julia -e 'using PValueAdjust; @assert isdefined(:PValueAdjust); @assert typeof(PValueAdjust) === Module'
+  - julia ./test/runtests.jl
