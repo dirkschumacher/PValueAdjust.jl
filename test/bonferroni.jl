@@ -3,7 +3,7 @@ using PValueAdjust
 
 pvalues = [0.05, 0.05, 0.05]
 newPvalues = bonferroni(pvalues)
-@test_approx_eq newValues pValues * 3.0
+@test_approx_eq newPvalues pValues * 3.0
 
 @test all(bonferroni([1,1,1]) .<= 1)
 
