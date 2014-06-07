@@ -13,3 +13,14 @@ bonferroni([0.05, 0.03, 0.05])
 # 0.2 
 # 0.04
 ```
+
+### Benjamini-Hochberg
+The Benjamini–Hochberg procedure controls the false discovery rate (FDR).
+```jl
+benjaminiHochberg([0.05, 0.03, 0.01, 0.5])
+# 4-element Array{Float64,1}:
+# 0.0666667
+# 0.06     
+# 0.04     
+# 0.5
+```
