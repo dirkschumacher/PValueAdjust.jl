@@ -7,5 +7,5 @@ newPvalues = bonferroni(pvalues)
 
 @test all(bonferroni([1,1,1]) .<= 1)
 
-@test_throws bonferroni([-1])
-@test_throws bonferroni([2])
+@test_throws DomainError, bonferroni([-1])
+@test_throws DomainError, bonferroni([2])
