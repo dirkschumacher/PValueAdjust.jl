@@ -17,4 +17,4 @@ script:
     - julia -e 'using PValueAdjust; @assert isdefined(:PValueAdjust); @assert typeof(PValueAdjust) === Module'
     - if [ $JULIAVERSION = "julianightlies" ]; then julia --code-coverage test/teruntestsst.jl; fi
     - if [ $JULIAVERSION = "juliarelease" ]; then julia test/runtests.jl; fi
-    - julia -e 'Pkg.add("Coverage"); using Coverage; Coveralls.submit(Coveralls.process_folder())'
+    - if [ $JULIAVERSION = "julianightlies" ]; then julia -e 'Pkg.add("Coverage"); using Coverage; Coveralls.submit(Coveralls.process_folder())'; fi
