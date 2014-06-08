@@ -50,6 +50,10 @@ benjaminiYekutieli(pValues)
 # 0.0833333
 # 1.0
 ```
+
+## Versioning
+This package uses Semantic Versioning 2.0.
+
 ## References
 Benjamini, Y., and Hochberg, Y. (1995). Controlling the false discovery rate: a practical and powerful approach to multiple testing. Journal of the Royal Statistical Society Series B 57, 289–300.
 
