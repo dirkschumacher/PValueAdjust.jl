@@ -5,8 +5,8 @@ Some methods to adjust p-values for multiple comparisons in Julia. All methods t
 This is work in progress. I don't really know if that is actually a good api.
 
 ## Methods
-### Bonferroni
-Controls the familywise error rate (FWER).
+### Control the Familywise error rate (FWER)
+#### Bonferroni
 ```jl
 bonferroni([0.05, 0.03, 0.01, 0.5])
 #4-element Array{Float64,1}:
@@ -16,8 +16,8 @@ bonferroni([0.05, 0.03, 0.01, 0.5])
 # 1.0
 ```
 
-### Holm
-Controls the familywise error rate (FWER). Also known as the Bonferroni-Holm method.
+#### Holm
+Also known as the Bonferroni-Holm method.
 ````jl
 holm([0.05, 0.03, 0.01, 0.5])
 #4-element Array{Float64,1}:
@@ -27,8 +27,8 @@ holm([0.05, 0.03, 0.01, 0.5])
 # 0.5
 ```
 
-### Benjamini-Hochberg
-Controls the false discovery rate (FDR).
+### Control the False discovery rate (FDR)
+#### Benjamini-Hochberg
 ```jl
 benjaminiHochberg([0.05, 0.03, 0.01, 0.5])
 #4-element Array{Float64,1}:
@@ -37,9 +37,7 @@ benjaminiHochberg([0.05, 0.03, 0.01, 0.5])
 # 0.04     
 # 0.5
 ```
-
-### Benjamini-Hochberg-Yekutieli
-Controls the false discovery rate (FDR).
+#### Benjamini-Hochberg-Yekutieli
 ````jl
 benjaminiYekutieli([0.05, 0.03, 0.01, 0.5])
 #4-element Array{Float64,1}:
