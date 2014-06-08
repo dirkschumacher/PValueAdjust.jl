@@ -8,7 +8,8 @@ This is work in progress. I don't really know if that is actually a good api.
 ### Control the Familywise error rate (FWER)
 #### Bonferroni
 ```jl
-bonferroni([0.05, 0.03, 0.01, 0.5])
+pValues = [0.05, 0.03, 0.01, 0.5]
+bonferroni(pValues)
 #4-element Array{Float64,1}:
 # 0.2 
 # 0.12
@@ -18,8 +19,9 @@ bonferroni([0.05, 0.03, 0.01, 0.5])
 
 #### Holm
 Also known as the Bonferroni-Holm method.
-````jl
-holm([0.05, 0.03, 0.01, 0.5])
+```jl
+pValues = [0.05, 0.03, 0.01, 0.5]
+holm(pValues)
 #4-element Array{Float64,1}:
 # 0.1 
 # 0.09
@@ -30,7 +32,8 @@ holm([0.05, 0.03, 0.01, 0.5])
 ### Control the False discovery rate (FDR)
 #### Benjamini-Hochberg
 ```jl
-benjaminiHochberg([0.05, 0.03, 0.01, 0.5])
+pValues = [0.05, 0.03, 0.01, 0.5]
+benjaminiHochberg(pValues)
 #4-element Array{Float64,1}:
 # 0.0666667
 # 0.06     
@@ -38,8 +41,9 @@ benjaminiHochberg([0.05, 0.03, 0.01, 0.5])
 # 0.5
 ```
 #### Benjamini-Hochberg-Yekutieli
-````jl
-benjaminiYekutieli([0.05, 0.03, 0.01, 0.5])
+```jl
+pValues = [0.05, 0.03, 0.01, 0.5]
+benjaminiYekutieli(pValues)
 #4-element Array{Float64,1}:
 # 0.138889 
 # 0.125    
