@@ -1,11 +1,11 @@
 [![Build Status](https://travis-ci.org/dirkschumacher/PValueAdjust.jl.svg?branch=master)](https://travis-ci.org/dirkschumacher/PValueAdjust.jl)
 # PValueAdjust.jl
-Some methods to adjust p-values for multiple comparisons in Julia. All methods take a vector of p-values and return a vector with adjusted values.
+Some methods to adjust p-values for multiple comparisons in Julia. All methods take a vector of p-values and return a vector with adjusted values. Please refer to the [documentation](http://stat.ethz.ch/R-manual/R-patched/library/stats/html/p.adjust.html) of the corresponding function in R or to Wikipedia ([FWER](http://en.wikipedia.org/wiki/Familywise_error_rate), [FDR](http://en.wikipedia.org/wiki/False_discovery_rate)), if you want to know more on this topic.
 
 This is work in progress.
 
 ## Methods
-### Control the Familywise error rate (FWER)
+### Control the Familywise error rate ([FWER](http://en.wikipedia.org/wiki/Familywise_error_rate))
 #### Bonferroni
 ```jl
 pValues = [0.05, 0.03, 0.01, 0.5]
@@ -29,7 +29,7 @@ holm(pValues)
 # 0.5
 ```
 
-### Control the False discovery rate (FDR)
+### Control the False discovery rate ([FDR](http://en.wikipedia.org/wiki/False_discovery_rate))
 #### Benjamini-Hochberg
 ```jl
 pValues = [0.05, 0.03, 0.01, 0.5]
