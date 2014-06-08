@@ -28,7 +28,7 @@ hochberg(pValues)
 ```
 
 #### Holm
-Also known as the Bonferroni-Holm method.
+Also known as the Holm–Bonferroni method.
 ```jl
 pValues = [0.05, 0.03, 0.01, 0.5]
 holm(pValues)
