@@ -6,11 +6,11 @@ function benjaminiHochberg(pValues)
   if n <= 1
     return pValues
   end
-  indexes = [1:n]
-  sortedIndexes = sort(indexes, by = (i) -> pValues[i])
+  sortedIndexes = order(pValues)
+  originalOrder = order(sortedIndexes)
   sortedPValues = pValues[sortedIndexes]
   for i in 1:(n - 1)
     sortedPValues[n - i] = min(sortedPValues[n - i + 1], sortedPValues[n - i] * n / (n - i))
   end
-  min(1, sortedPValues[sortedIndexes])
+  min(1, sortedPValues[originalOrder])
 end
