@@ -3,14 +3,18 @@ compiler:
     - gcc
 notifications:
     email: false
+env:
+    matrix:
+        - JULIAVERSION="juliareleases"
+        - JULIAVERSION="julianightlies"
 before_install:
-  - sudo add-apt-repository ppa:staticfloat/julia-deps -y
-  - sudo add-apt-repository ppa:staticfloat/julianightlies -y
-  - sudo apt-get update -qq -y
-  - sudo apt-get install libpcre3-dev julia -y
+    - sudo add-apt-repository ppa:staticfloat/julia-deps -y
+    - sudo add-apt-repository ppa:staticfloat/${JULIAVERSION} -y
+    - sudo apt-get update -qq -y
+    - sudo apt-get install libpcre3-dev julia -y
 script:
-  - julia -e 'Pkg.init(); run(`ln -s $(pwd()) $(Pkg.dir("PValueAdjust"))`); Pkg.pin("PValueAdjust"); Pkg.resolve()'
-  - julia -e 'using PValueAdjust; @assert isdefined(:PValueAdjust); @assert typeof(PValueAdjust) === Module'
-  - julia --code-coverage ./test/runtests.jl
-after_success:
-  - julia -e 'cd(Pkg.dir("PValueAdjust")); Pkg.add("Coverage"); using Coverage; Coveralls.submit(Coveralls.process_folder())'
+    - julia -e 'Pkg.init(); run(`ln -s $(pwd()) $(Pkg.dir("PValueAdjust"))`); Pkg.pin("PValueAdjust"); Pkg.resolve()'
+    - julia -e 'using PValueAdjust; @assert isdefined(:PValueAdjust); @assert typeof(PValueAdjust) === Module'
+    - if [ $JULIAVERSION = "julianightlies" ]; then julia --code-coverage test/teruntestsst.jl; fi
+    - if [ $JULIAVERSION = "juliarelease" ]; then julia test/runtests.jl; fi
+    - julia -e 'Pkg.add("Coverage"); using Coverage; Coveralls.submit(Coveralls.process_folder())'
