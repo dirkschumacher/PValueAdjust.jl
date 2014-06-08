@@ -9,8 +9,8 @@ function holm(pValues)
   sortedIndexes = order(pValues)
   originalOrder = order(sortedIndexes)
   sortedPValues = pValues[sortedIndexes]
-  for i in 1:n
-    sortedPValues[i] = sortedPValues[i] * (n + 1 - i)
+  for i in 1:(n - 1)
+    sortedPValues[n - i] = min(sortedPValues[n - i + 1], sortedPValues[n - i] * (1 + i))
   end
   min(1, sortedPValues[originalOrder])
 end
