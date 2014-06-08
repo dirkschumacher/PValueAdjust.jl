@@ -2,7 +2,7 @@
 # PValueAdjust.jl
 Some methods to adjust p-values for multiple comparisons in Julia. All methods take a vector of p-values and return a vector with adjusted values.
 
-This is work in progress. I don't really know if that is actually a good api.
+This is work in progress.
 
 ## Methods
 ### Control the Familywise error rate (FWER)
