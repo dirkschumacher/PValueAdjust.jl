@@ -5,7 +5,7 @@ Some methods to adjust p-values for multiple comparisons in Julia. All methods t
 
 
 ## Methods
-### Control the Familywise error rate ([FWER](http://en.wikipedia.org/wiki/Familywise_error_rate))
+### Control the familywise error rate ([FWER](http://en.wikipedia.org/wiki/Familywise_error_rate))
 #### Bonferroni
 ```jl
 pValues = [0.05, 0.03, 0.01, 0.5]
@@ -40,7 +40,7 @@ holm(pValues)
 # 0.5
 ```
 
-### Control the False discovery rate ([FDR](http://en.wikipedia.org/wiki/False_discovery_rate))
+### Control the false discovery rate ([FDR](http://en.wikipedia.org/wiki/False_discovery_rate))
 #### Benjamini-Hochberg
 ```jl
 pValues = [0.05, 0.03, 0.01, 0.5]
