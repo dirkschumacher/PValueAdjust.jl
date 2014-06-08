@@ -16,7 +16,7 @@ bonferroni(pValues)
 # 1.0
 ```
 
-### Hochberg
+#### Hochberg
 ```jl
 pValues = [0.05, 0.03, 0.01, 0.5]
 hochberg(pValues)
