@@ -10,58 +10,58 @@ All methods are tested against the R function [`p.adjust`](http://stat.ethz.ch/R
 ### Control the familywise error rate ([FWER](http://en.wikipedia.org/wiki/Familywise_error_rate))
 #### Bonferroni
 ```jl
-pValues = [0.05, 0.03, 0.01, 0.5]
-bonferroni(pValues)
-#4-element Array{Float64,1}:
-# 0.2 
-# 0.12
-# 0.04
-# 1.0
+julia > pValues = [0.05, 0.03, 0.01, 0.5]
+julia > bonferroni(pValues)
+4-element Array{Float64,1}:
+ 0.2 
+ 0.12
+ 0.04
+ 1.0
 ```
 
 #### Hochberg
 ```jl
-pValues = [0.05, 0.03, 0.01, 0.5]
-hochberg(pValues)
-#4-element Array{Float64,1}:
-# 0.1 
-# 0.09
-# 0.04
-# 0.5
+julia > pValues = [0.05, 0.03, 0.01, 0.5]
+julia > hochberg(pValues)
+4-element Array{Float64,1}:
+ 0.1 
+ 0.09
+ 0.04
+ 0.5
 ```
 
 #### Holm
 Also known as the Holm–Bonferroni method.
 ```jl
-pValues = [0.05, 0.03, 0.01, 0.5]
-holm(pValues)
-#4-element Array{Float64,1}:
-# 0.1 
-# 0.09
-# 0.04
-# 0.5
+julia > pValues = [0.05, 0.03, 0.01, 0.5]
+julia > holm(pValues)
+4-element Array{Float64,1}:
+ 0.1 
+ 0.09
+ 0.04
+ 0.5
 ```
 
 ### Control the false discovery rate ([FDR](http://en.wikipedia.org/wiki/False_discovery_rate))
 #### Benjamini-Hochberg
 ```jl
-pValues = [0.05, 0.03, 0.01, 0.5]
-benjaminiHochberg(pValues)
-#4-element Array{Float64,1}:
-# 0.0666667
-# 0.06     
-# 0.04     
-# 0.5
+julia > pValues = [0.05, 0.03, 0.01, 0.5]
+julia > benjaminiHochberg(pValues)
+4-element Array{Float64,1}:
+ 0.0666667
+ 0.06     
+ 0.04     
+ 0.5
 ```
 #### Benjamini-Hochberg-Yekutieli
 ```jl
-pValues = [0.05, 0.03, 0.01, 0.5]
-benjaminiYekutieli(pValues)
-#4-element Array{Float64,1}:
-# 0.138889 
-# 0.125    
-# 0.0833333
-# 1.0
+julia > pValues = [0.05, 0.03, 0.01, 0.5]
+julia > benjaminiYekutieli(pValues)
+4-element Array{Float64,1}:
+ 0.138889 
+ 0.125    
+ 0.0833333
+ 1.0
 ```
 
 ## Versioning
