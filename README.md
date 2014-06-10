@@ -5,7 +5,7 @@ Some methods to adjust p-values for multiple comparisons in Julia. All methods t
 
 All methods are tested against the R function [`p.adjust`](http://stat.ethz.ch/R-manual/R-patched/library/stats/html/p.adjust.html).
 
-Current stable version is 0.2.0.
+Current stable version is [0.2.0](https://github.com/dirkschumacher/PValueAdjust.jl/tree/v0.2.0).
 
 
 ## Methods
