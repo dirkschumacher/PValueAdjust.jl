@@ -14,7 +14,7 @@ pvalues = [0.05, 0.003, 0.51, 0.0001, 0.01, 0.0, 0.008]
 @test_approx_eq hommel(pvalues) [0.1, 0.015, 0.51, 0.0006, 0.03, 0, 0.024]
 @test all(hommel([1,1,1]) .<= 1)
 
-@test_throws DomainError hommel([-1])
-@test_throws DomainError hommel([2])
+@test_throws hommel([-1])
+@test_throws hommel([2])
 
 @test hommel([0.5]) == [0.5]
