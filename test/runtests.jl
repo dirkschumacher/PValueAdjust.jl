@@ -1,6 +1,7 @@
 tests = [
     "bonferroni",
     "holm",
+    "hommel",
     "hochberg",
     "benjaminiHochberg",
     "benjaminiYekutieli"]

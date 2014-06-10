@@ -42,6 +42,17 @@ holm(pValues)
 # 0.5
 ```
 
+#### Hommel
+```jl
+julia > pValues = [0.05, 0.03, 0.01, 0.5]
+julia > hommel(pValues)
+4-element Array{Float64,1}:
+ 0.1  
+ 0.075
+ 0.04 
+ 0.5
+```
+
 ### Control the false discovery rate ([FDR](http://en.wikipedia.org/wiki/False_discovery_rate))
 #### Benjamini-Hochberg
 ```jl
@@ -75,3 +86,5 @@ Benjamini, Y., and Yekutieli, D. (2001). The control of the false discovery rate
 Hochberg, Y. (1988). A sharper Bonferroni procedure for multiple tests of significance. Biometrika 75, 800–803. 
 
 Holm, S. (1979). A simple sequentially rejective multiple test procedure. Scandinavian Journal of Statistics 6, 65–70. 
+
+Wright, S. P. (1992). Adjusted p-values for simultaneous inference. Biometrics, 48, 1005-1005.
