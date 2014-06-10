@@ -9,7 +9,7 @@ newPvalues = holm([0.05, 0.03, 0.01, 0.5])
 
 @test all(holm([1,1,1]) .<= 1)
 
-@test_throws DomainError holm([-1])
-@test_throws DomainError holm([2])
+@test_throws holm([-1])
+@test_throws holm([2])
 
 @test holm([0.5]) == [0.5]
