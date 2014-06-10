@@ -9,7 +9,7 @@ newPvalues = hochberg([0.05, 0.03, 0.01, 0.5])
 
 @test all(hochberg([1,1,1]) .<= 1)
 
-@test_throws DomainError hochberg([-1])
-@test_throws DomainError hochberg([2])
+@test_throws hochberg([-1])
+@test_throws hochberg([2])
 
 @test hochberg([0.5]) == [0.5]
