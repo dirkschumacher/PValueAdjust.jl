@@ -8,6 +8,14 @@ All methods are tested against the R function [`p.adjust`](http://stat.ethz.ch/R
 
 Current stable version is [0.2.0](https://github.com/dirkschumacher/PValueAdjust.jl/tree/v0.2.0).
 
+## Install
+```jl
+# get the latest stable version
+Pkg.add("PValueAdjust")
+
+# get the latest development version
+Pkg.clone("git://github.com/dirkschumacher/PValueAdjust.jl.git")
+```
 
 ## Methods
 ### Control the familywise error rate ([FWER](http://en.wikipedia.org/wiki/Familywise_error_rate))
@@ -79,7 +87,7 @@ julia > benjaminiYekutieli(pValues)
 ```
 
 ## Versioning
-This package uses [Semantic Versioning 2.0](http://semver.org/).
+This package uses [Semantic Versioning 2.0](http://semver.org/). Most of the Julia Packages though start with a leading zero, although they are considered stable.
 
 ## References
 Benjamini, Y., and Hochberg, Y. (1995). Controlling the false discovery rate: a practical and powerful approach to multiple testing. Journal of the Royal Statistical Society Series B 57, 289–300.
