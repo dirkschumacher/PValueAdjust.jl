@@ -7,6 +7,8 @@ All methods are tested against the R function [`p.adjust`](http://stat.ethz.ch/R
 
 
 ## Methods
+All methods can either be invoked by their name or by using the function `padjust`. The latter is the recommended way.
+
 ### Control the familywise error rate ([FWER](http://en.wikipedia.org/wiki/Familywise_error_rate))
 #### Bonferroni
 ```jl
@@ -17,6 +19,8 @@ julia > bonferroni(pValues)
  0.12
  0.04
  1.0
+julia > padjust(pValues, :bonferroni) == bonferroni(pValues)
+ true
 ```
 
 #### Hochberg
@@ -28,6 +32,8 @@ julia > hochberg(pValues)
  0.09
  0.04
  0.5
+julia > padjust(pValues, :hochberg) == hochberg(pValues)
+ true
 ```
 
 #### Holm
@@ -40,6 +46,8 @@ julia > holm(pValues)
  0.09
  0.04
  0.5
+julia > padjust(pValues, :holm) == holm(pValues)
+ true
 ```
 
 #### Hommel
@@ -51,6 +59,8 @@ julia > hommel(pValues)
  0.075
  0.04 
  0.5
+julia > padjust(pValues, :hommel) == hommel(pValues)
+ true
 ```
 
 ### Control the false discovery rate ([FDR](http://en.wikipedia.org/wiki/False_discovery_rate))
@@ -63,6 +73,8 @@ julia > benjaminiHochberg(pValues)
  0.06     
  0.04     
  0.5
+julia > padjust(pValues, :benjaminiHochberg) == benjaminiHochberg(pValues)
+ true
 ```
 #### Benjamini-Hochberg-Yekutieli
 ```jl
@@ -73,6 +85,8 @@ julia > benjaminiYekutieli(pValues)
  0.125    
  0.0833333
  1.0
+julia > padjust(pValues, :benjaminiYekutieli) == benjaminiYekutieli(pValues)
+ true
 ```
 
 ## Versioning

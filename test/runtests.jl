@@ -4,7 +4,8 @@ tests = [
     "hommel",
     "hochberg",
     "benjaminiHochberg",
-    "benjaminiYekutieli"]
+    "benjaminiYekutieli",
+    "padjust"]
 
 println("Running tests:")
 
