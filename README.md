@@ -91,7 +91,7 @@ julia > padjust(pValues, method = :benjaminiYekutieli)
 ```
 
 ## Versioning
-This package uses [Semantic Versioning 2.0](http://semver.org/). Most of the Julia Packages though start with a leading zero, although they are considered stable.
+This package uses [Semantic Versioning 2.0](http://semver.org/). 
 
 ## References
 Benjamini, Y., and Hochberg, Y. (1995). Controlling the false discovery rate: a practical and powerful approach to multiple testing. Journal of the Royal Statistical Society Series B 57, 289–300.
