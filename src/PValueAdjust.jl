@@ -1,6 +1,6 @@
 module PValueAdjust
 
-export benjaminiHochberg, benjaminiYekutieli, bonferroni, hochberg, holm, hommel, padjust
+export padjust
 
 include("helper.jl")
 include("bonferroni.jl")

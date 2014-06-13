@@ -1,92 +1,82 @@
 [![Build Status](https://travis-ci.org/dirkschumacher/PValueAdjust.jl.svg?branch=master)](https://travis-ci.org/dirkschumacher/PValueAdjust.jl)
 [![Coverage Status](https://img.shields.io/coveralls/dirkschumacher/PValueAdjust.jl.svg)](https://coveralls.io/r/dirkschumacher/PValueAdjust.jl)
 # PValueAdjust.jl
-Some methods to adjust p-values for multiple comparisons in Julia. All methods take a vector of p-values and return a vector with adjusted values. Please refer to the [documentation](http://stat.ethz.ch/R-manual/R-patched/library/stats/html/p.adjust.html) of the corresponding function in R or to Wikipedia ([FWER](http://en.wikipedia.org/wiki/Familywise_error_rate), [FDR](http://en.wikipedia.org/wiki/False_discovery_rate)), if you want to know more on this topic.
+Some methods to adjust p-values for multiple comparisons in Julia.
+The various methods can be called using the function `padjust`. 
+`padjust` takes an array of p-values and a second method parameter and returns an array of adjusted p-values.
+`padjust` also accepts the method `:none`. This is also the default method, if no method parameter was set.
+Please refer to the [documentation](http://stat.ethz.ch/R-manual/R-patched/library/stats/html/p.adjust.html) of the corresponding function in R or to Wikipedia ([FWER](http://en.wikipedia.org/wiki/Familywise_error_rate), [FDR](http://en.wikipedia.org/wiki/False_discovery_rate)), if you want to know more on this topic.
 
 All methods are tested against the R function [`p.adjust`](http://stat.ethz.ch/R-manual/R-patched/library/stats/html/p.adjust.html).
 
 
-## Methods
-All methods can either be invoked by their name or by using the function `padjust`. The latter is the recommended way. 
-`padjust` also accepts the method `:none`. This is also the default method, if no method parameter was set.
+## Methods 
 ### Control the familywise error rate ([FWER](http://en.wikipedia.org/wiki/Familywise_error_rate))
 #### Bonferroni
 ```jl
 julia > pValues = [0.05, 0.03, 0.01, 0.5]
-julia > bonferroni(pValues)
+julia > padjust(pValues, method = :bonferroni)
 4-element Array{Float64,1}:
  0.2 
  0.12
  0.04
  1.0
-julia > padjust(pValues, method = :bonferroni) == bonferroni(pValues)
- true
 ```
 
 #### Hochberg
 ```jl
 julia > pValues = [0.05, 0.03, 0.01, 0.5]
-julia > hochberg(pValues)
+julia > padjust(pValues, method = :hochberg)
 4-element Array{Float64,1}:
  0.1 
  0.09
  0.04
  0.5
-julia > padjust(pValues, method = :hochberg) == hochberg(pValues)
- true
 ```
 
 #### Holm
 Also known as the Holm–Bonferroni method.
 ```jl
 julia > pValues = [0.05, 0.03, 0.01, 0.5]
-julia > holm(pValues)
+julia > padjust(pValues, method = :holm)
 4-element Array{Float64,1}:
  0.1 
  0.09
  0.04
  0.5
-julia > padjust(pValues, method = :holm) == holm(pValues)
- true
 ```
 
 #### Hommel
 ```jl
 julia > pValues = [0.05, 0.03, 0.01, 0.5]
-julia > hommel(pValues)
+julia > padjust(pValues, method = :hommel)
 4-element Array{Float64,1}:
  0.1  
  0.075
  0.04 
  0.5
-julia > padjust(pValues, method = :hommel) == hommel(pValues)
- true
 ```
 
 ### Control the false discovery rate ([FDR](http://en.wikipedia.org/wiki/False_discovery_rate))
 #### Benjamini-Hochberg
 ```jl
 julia > pValues = [0.05, 0.03, 0.01, 0.5]
-julia > benjaminiHochberg(pValues)
+julia > padjust(pValues, method = :benjaminiHochberg)
 4-element Array{Float64,1}:
  0.0666667
  0.06     
  0.04     
  0.5
-julia > padjust(pValues, method = :benjaminiHochberg) == benjaminiHochberg(pValues)
- true
 ```
 #### Benjamini-Hochberg-Yekutieli
 ```jl
 julia > pValues = [0.05, 0.03, 0.01, 0.5]
-julia > benjaminiYekutieli(pValues)
+julia > padjust(pValues, method = :benjaminiYekutieli)
 4-element Array{Float64,1}:
  0.138889 
  0.125    
  0.0833333
  1.0
-julia > padjust(pValues, method = :benjaminiYekutieli) == benjaminiYekutieli(pValues)
- true
 ```
 
 ## Versioning
