@@ -5,7 +5,7 @@
 Some methods to adjust p-values for multiple comparisons in Julia.
 The various methods can be called using the function `padjust`. 
 `padjust` takes an array of p-values and a second method parameter and returns an array of adjusted p-values.
-`padjust` also accepts the method `:none`. This is also the default method, if no method parameter was set.
+`padjust` also accepts the method `:none`. This is also the default method, if no method parameter is set.
 Please refer to the [documentation](http://stat.ethz.ch/R-manual/R-patched/library/stats/html/p.adjust.html) of the corresponding function in R or to Wikipedia ([FWER](http://en.wikipedia.org/wiki/Familywise_error_rate), [FDR](http://en.wikipedia.org/wiki/False_discovery_rate)), if you want to know more on this topic.
 
 All methods are tested against the R function [`p.adjust`](http://stat.ethz.ch/R-manual/R-patched/library/stats/html/p.adjust.html).
