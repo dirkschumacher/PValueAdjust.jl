@@ -1,4 +1,4 @@
-function padjust(pValues::AbstractArray, method::Symbol)
+function padjust(pValues::AbstractArray; method = :none)
   if method == :hommel
     return hommel(pValues)
   elseif method == :holm
@@ -11,6 +11,8 @@ function padjust(pValues::AbstractArray, method::Symbol)
     return benjaminiHochberg(pValues)
   elseif method == :benjaminiYekutieli
     return benjaminiYekutieli(pValues)
+  elseif method == :none
+    return pValues
   end
   throw(ArgumentError())
 end
