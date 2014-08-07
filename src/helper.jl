@@ -1,5 +1,5 @@
 macro checkPValues(pValues)
-    return :(if any(($pValues .< 0.0) | ($pValues .> 1.0))
+    :(if any(($pValues .< 0.0) | ($pValues .> 1.0))
       throw(DomainError())
     end)
 end
