@@ -1,7 +1,5 @@
 function benjaminiYekutieli(pValues)
-  if any((pValues .< 0.0) | (pValues .> 1.0))
-    throw(DomainError())
-  end
+  @checkPValues pValues
   n = length(pValues)
   if n <= 1
     return pValues
