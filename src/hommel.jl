@@ -1,8 +1,6 @@
 # taken from Wright, S. P. (1992). Adjusted p-values for simultaneous inference. Biometrics, 48, 1005-1005.
 function hommel(pValues)
-  if any((pValues .< 0.0) | (pValues .> 1.0))
-    throw(DomainError())
-  end
+  @checkPValues pValues
   n = length(pValues)
   if n <= 1
     return pValues
