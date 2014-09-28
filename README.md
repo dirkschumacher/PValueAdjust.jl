@@ -57,17 +57,6 @@ julia > padjust(pValues, method = :holm)
  0.5
 ```
 
-#### Hommel
-```jl
-julia > pValues = [0.05, 0.03, 0.01, 0.5]
-julia > padjust(pValues, method = :hommel)
-4-element Array{Float64,1}:
- 0.1  
- 0.075
- 0.04 
- 0.5
-```
-
 ### Control the false discovery rate ([FDR](http://en.wikipedia.org/wiki/False_discovery_rate))
 #### Benjamini-Hochberg
 ```jl
