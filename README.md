@@ -90,7 +90,3 @@ Benjamini, Y., and Yekutieli, D. (2001). The control of the false discovery rate
 Hochberg, Y. (1988). A sharper Bonferroni procedure for multiple tests of significance. Biometrika 75, 800–803. 
 
 Holm, S. (1979). A simple sequentially rejective multiple test procedure. Scandinavian Journal of Statistics 6, 65–70. 
-
-Hommel, G. (1988). A stagewise rejective multiple test procedure based on a modified Bonferroni test. Biometrika 75, 383–386.
-
-Wright, S. P. (1992). Adjusted p-values for simultaneous inference. Biometrics, 48, 1005-1005.
