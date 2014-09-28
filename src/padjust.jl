@@ -1,18 +1,11 @@
-function padjust(pValues::AbstractArray; method = :none)
-  if method == :hommel
-    return hommel(pValues)
-  elseif method == :holm
-    return holm(pValues)
-  elseif method == :hochberg
-    return hochberg(pValues)
-  elseif method == :bonferroni
-    return bonferroni(pValues)
-  elseif method == :benjaminiHochberg  
-    return benjaminiHochberg(pValues)
-  elseif method == :benjaminiYekutieli
-    return benjaminiYekutieli(pValues)
-  elseif method == :none
-    return pValues
-  end
-  throw(ArgumentError())
+padjust(pValues::AbstractArray, method::BonferroniMethod) = bonferroni(pValues)
+padjust(pValues::AbstractArray, method::BenjaminiHochbergMethod) = benjaminiHochberg(pValues)
+padjust(pValues::AbstractArray, method::BenjaminiYekutieliMethod) = benjaminiYekutieli(pValues)
+padjust(pValues::AbstractArray, method::HochbergMethod) = hochberg(pValues)
+padjust(pValues::AbstractArray, method::HolmMethod) = holm(pValues)
+padjust(pValues::AbstractArray, method::HommelMethod) = hommel(pValues)
+
+function padjust(pValues::AbstractArray) 
+  @check_pValues pValues 
+  pValues
 end

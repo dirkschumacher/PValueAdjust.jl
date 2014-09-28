@@ -1,5 +1,5 @@
 function holm(pValues)
-  @checkPValues pValues
+  @check_pValues pValues
   n = length(pValues)
   if n <= 1
     return pValues
