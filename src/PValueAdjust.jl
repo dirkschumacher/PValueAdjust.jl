@@ -5,7 +5,6 @@ module PValueAdjust
   export BenjaminiYekutieli
   export Hochberg
   export Holm
-  export Hommel
   export padjust
 
   include("types.jl")
@@ -14,7 +13,6 @@ module PValueAdjust
   include("benjaminiHochberg.jl")
   include("hochberg.jl")
   include("holm.jl")
-  include("hommel.jl")
   include("benjaminiYekutieli.jl")
   include("padjust.jl")
 

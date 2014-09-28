@@ -3,7 +3,6 @@ padjust(pValues::AbstractArray, method::BenjaminiHochbergMethod) = benjaminiHoch
 padjust(pValues::AbstractArray, method::BenjaminiYekutieliMethod) = benjaminiYekutieli(pValues)
 padjust(pValues::AbstractArray, method::HochbergMethod) = hochberg(pValues)
 padjust(pValues::AbstractArray, method::HolmMethod) = holm(pValues)
-padjust(pValues::AbstractArray, method::HommelMethod) = hommel(pValues)
 
 function padjust(pValues::AbstractArray) 
   @check_pValues pValues 
