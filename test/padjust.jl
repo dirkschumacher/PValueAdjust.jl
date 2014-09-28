@@ -5,4 +5,4 @@ using PValueAdjust
 pValues = [1, 0.5, 0.1, 0.001, 0.0001, 0.002]
 @test_approx_eq padjust(pValues, method = :none) pValues
 @test_approx_eq padjust(pValues) pValues
-@test_throws padjust(pValues, method = :none)
+@test_throws padjust([1], method = :wat)
