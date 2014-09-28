@@ -1,7 +1,5 @@
 function padjust(pValues::AbstractArray; method = :none)
-  if method == :hommel
-    return hommel(pValues)
-  elseif method == :holm
+  if method == :holm
     return holm(pValues)
   elseif method == :hochberg
     return hochberg(pValues)
