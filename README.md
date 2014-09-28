@@ -10,7 +10,7 @@ Please refer to the [documentation](http://stat.ethz.ch/R-manual/R-patched/libra
 
 All methods are tested against the R function [`p.adjust`](http://stat.ethz.ch/R-manual/R-patched/library/stats/html/p.adjust.html).
 
-Current stable version is [1.0.0](https://github.com/dirkschumacher/PValueAdjust.jl/tree/v1.0.0).
+Current stable version is [2.0.0](https://github.com/dirkschumacher/PValueAdjust.jl/tree/v2.0.0).
 
 ## Install
 ```jl
