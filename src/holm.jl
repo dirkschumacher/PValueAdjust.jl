@@ -7,9 +7,6 @@ function holm(pValues)
   sortedIndexes = order(pValues)
   originalOrder = order(sortedIndexes)
   sortedPValues = pValues[sortedIndexes]
-  sortedPValues[1] *= n
-  for i in 2:n
-    sortedPValues[i] = max(sortedPValues[i - 1], sortedPValues[i] * (n + 1 - i))
-  end
+  @step_down_adjustment (n + 1 - i) sortedPValues
   min(1, sortedPValues[originalOrder])
 end
