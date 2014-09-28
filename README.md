@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.org/dirkschumacher/PValueAdjust.jl.svg?branch=master)](https://travis-ci.org/dirkschumacher/PValueAdjust.jl)
 [![Coverage Status](https://img.shields.io/coveralls/dirkschumacher/PValueAdjust.jl.svg)](https://coveralls.io/r/dirkschumacher/PValueAdjust.jl)
-[![PValueAdjust](http://pkg.julialang.org/badges/PValueAdjust_0.2.svg)](http://pkg.julialang.org/?pkg=PValueAdjust&ver=0.2)
+[![PValueAdjust](http://pkg.julialang.org/badges/PValueAdjust_release.svg)](http://pkg.julialang.org/?pkg=PValueAdjust&ver=release)
 # PValueAdjust.jl
 Some methods to adjust p-values for multiple comparisons in Julia.
 The various methods can be called using the function `padjust`. 
