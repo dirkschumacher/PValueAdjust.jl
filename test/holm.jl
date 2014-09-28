@@ -9,7 +9,7 @@ newPvalues = padjust([0.05, 0.03, 0.01, 0.5], method = :holm)
 
 @test all(padjust([1,1,1], method = :holm) .<= 1)
 
-@test_throws padjust([-1], method = :holm)
-@test_throws padjust([2], method = :holm)
+@test_throws DomainError padjust([-1], method = :holm)
+@test_throws DomainError padjust([2], method = :holm)
 
 @test padjust([0.5], method = :holm) == [0.5]

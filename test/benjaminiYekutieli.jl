@@ -8,7 +8,7 @@ newPvalues = padjust([0.05, 0.03, 0.01, 0.5], method = :benjaminiYekutieli)
 @test_approx_eq padjust([0.05, 0.05, 0.05], method = :benjaminiYekutieli) [0.0916666666667, 0.0916666666667, 0.0916666666667]
 @test all(padjust([1.0 ,1.0, 1.0], method = :benjaminiYekutieli) .<= 1.0)
 
-@test_throws padjust([-1], method = :benjaminiYekutieli)
-@test_throws padjust([2], method = :benjaminiYekutieli)
+@test_throws DomainError padjust([-1], method = :benjaminiYekutieli)
+@test_throws DomainError padjust([2], method = :benjaminiYekutieli)
 
 @test padjust([0.5], method = :benjaminiYekutieli) == [0.5]
