@@ -5,10 +5,9 @@
 Some methods to adjust p-values for multiple comparisons in Julia.
 The various methods can be called using the function `padjust`. 
 `padjust` takes an array of p-values and a second method parameter and returns an array of adjusted p-values.
-`padjust` also accepts the method `:none`. This is also the default method, if no method parameter is set.
 Please refer to the [documentation](http://stat.ethz.ch/R-manual/R-patched/library/stats/html/p.adjust.html) of the corresponding function in R or to Wikipedia ([FWER](http://en.wikipedia.org/wiki/Familywise_error_rate), [FDR](http://en.wikipedia.org/wiki/False_discovery_rate)), if you want to know more on this topic.
 
-Current stable version is [2.0.0](https://github.com/dirkschumacher/PValueAdjust.jl/tree/v2.0.0).
+Current stable version is [3.0.0](https://github.com/dirkschumacher/PValueAdjust.jl/tree/v3.0.0).
 
 In case you find any bugs please post an issue here or send a pull request. Make sure you write a test for your contribution. 
 
@@ -26,7 +25,7 @@ Pkg.clone("git://github.com/dirkschumacher/PValueAdjust.jl.git")
 #### Bonferroni
 ```jl
 julia > pValues = [0.05, 0.03, 0.01, 0.5]
-julia > padjust(pValues, method = :bonferroni)
+julia > padjust(pValues, Bonferroni)
 4-element Array{Float64,1}:
  0.2 
  0.12
@@ -37,7 +36,7 @@ julia > padjust(pValues, method = :bonferroni)
 #### Hochberg
 ```jl
 julia > pValues = [0.05, 0.03, 0.01, 0.5]
-julia > padjust(pValues, method = :hochberg)
+julia > padjust(pValues, Hochberg)
 4-element Array{Float64,1}:
  0.1 
  0.09
@@ -49,7 +48,7 @@ julia > padjust(pValues, method = :hochberg)
 Also known as the Holm–Bonferroni method.
 ```jl
 julia > pValues = [0.05, 0.03, 0.01, 0.5]
-julia > padjust(pValues, method = :holm)
+julia > padjust(pValues, Holm)
 4-element Array{Float64,1}:
  0.1 
  0.09
@@ -61,7 +60,7 @@ julia > padjust(pValues, method = :holm)
 #### Benjamini-Hochberg
 ```jl
 julia > pValues = [0.05, 0.03, 0.01, 0.5]
-julia > padjust(pValues, method = :benjaminiHochberg)
+julia > padjust(pValues, BenjaminiHochberg)
 4-element Array{Float64,1}:
  0.0666667
  0.06     
@@ -71,7 +70,7 @@ julia > padjust(pValues, method = :benjaminiHochberg)
 #### Benjamini-Hochberg-Yekutieli
 ```jl
 julia > pValues = [0.05, 0.03, 0.01, 0.5]
-julia > padjust(pValues, method = :benjaminiYekutieli)
+julia > padjust(pValues, BenjaminiYekutieli)
 4-element Array{Float64,1}:
  0.138889 
  0.125    

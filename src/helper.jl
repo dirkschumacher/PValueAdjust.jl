@@ -1,4 +1,4 @@
-macro checkPValues(pValues)
+macro check_pValues(pValues)
     :(if any(($pValues .< 0.0) | ($pValues .> 1.0))
       throw(DomainError())
     end)
