@@ -1,21 +1,17 @@
 [![Build Status](https://travis-ci.org/dirkschumacher/PValueAdjust.jl.svg?branch=master)](https://travis-ci.org/dirkschumacher/PValueAdjust.jl)
 [![Coverage Status](https://img.shields.io/coveralls/dirkschumacher/PValueAdjust.jl.svg)](https://coveralls.io/r/dirkschumacher/PValueAdjust.jl)
-[![PValueAdjust](http://pkg.julialang.org/badges/PValueAdjust_release.svg)](http://pkg.julialang.org/?pkg=PValueAdjust&ver=release)
 # PValueAdjust.jl
 Some methods to adjust p-values for multiple comparisons in Julia.
 The various methods can be called using the function `padjust`. 
 `padjust` takes an array of p-values and a second method parameter and returns an array of adjusted p-values.
 Please refer to the [documentation](http://stat.ethz.ch/R-manual/R-patched/library/stats/html/p.adjust.html) of the corresponding function in R or to Wikipedia ([FWER](http://en.wikipedia.org/wiki/Familywise_error_rate), [FDR](http://en.wikipedia.org/wiki/False_discovery_rate)), if you want to know more on this topic.
 
-Current stable version is [3.0.0](https://github.com/dirkschumacher/PValueAdjust.jl/tree/v3.0.0).
+This package is currently not available in the package manager.
 
 In case you find any bugs please post an issue here or send a pull request. Make sure you write a test for your contribution. 
 
 ## Install
 ```jl
-# get the latest stable version
-Pkg.add("PValueAdjust")
-
 # get the latest development version
 Pkg.clone("git://github.com/dirkschumacher/PValueAdjust.jl.git")
 ```
