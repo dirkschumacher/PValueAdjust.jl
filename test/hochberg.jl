@@ -9,7 +9,7 @@ newPvalues = padjust([0.05, 0.03, 0.01, 0.5], Hochberg)
 
 @test all(padjust([1,1,1], Hochberg) .<= 1)
 
-@test_throws padjust([-1], Hochberg)
-@test_throws padjust([2], Hochberg)
+@test_throws DomainError padjust([-1], Hochberg)
+@test_throws DomainError padjust([2], Hochberg)
 
 @test padjust([0.5], Hochberg) == [0.5]

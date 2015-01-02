@@ -8,7 +8,7 @@ newPvalues = padjust([0.05, 0.03, 0.01, 0.5], BenjaminiYekutieli)
 @test_approx_eq padjust([0.05, 0.05, 0.05], BenjaminiYekutieli) [0.0916666666667, 0.0916666666667, 0.0916666666667]
 @test all(padjust([1.0 ,1.0, 1.0], BenjaminiYekutieli) .<= 1.0)
 
-@test_throws padjust([-1], BenjaminiYekutieli)
-@test_throws padjust([2], BenjaminiYekutieli)
+@test_throws DomainError padjust([-1], BenjaminiYekutieli)
+@test_throws DomainError padjust([2], BenjaminiYekutieli)
 
 @test padjust([0.5], BenjaminiYekutieli) == [0.5]

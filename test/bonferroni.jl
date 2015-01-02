@@ -7,5 +7,5 @@ newPvalues = padjust(pvalues, Bonferroni)
 
 @test all(padjust([1,1,1], Bonferroni) .<= 1)
 
-@test_throws padjust([-1], Bonferroni)
-@test_throws padjust([2], Bonferroni)
+@test_throws DomainError padjust([-1], Bonferroni)
+@test_throws DomainError padjust([2], Bonferroni)
