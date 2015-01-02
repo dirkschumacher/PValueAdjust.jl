@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.org/dirkschumacher/PValueAdjust.jl.svg?branch=master)](https://travis-ci.org/dirkschumacher/PValueAdjust.jl)
 [![Coverage Status](https://img.shields.io/coveralls/dirkschumacher/PValueAdjust.jl.svg)](https://coveralls.io/r/dirkschumacher/PValueAdjust.jl)
-[![PValueAdjust](http://pkg.julialang.org/badges/PValueAdjust_0.2.svg)](http://pkg.julialang.org/?pkg=PValueAdjust&ver=0.2)
+[![PValueAdjust](http://pkg.julialang.org/badges/PValueAdjust_release.svg)](http://pkg.julialang.org/?pkg=PValueAdjust&ver=release)
 # PValueAdjust.jl
 Some methods to adjust p-values for multiple comparisons in Julia.
 The various methods can be called using the function `padjust`. 
@@ -8,9 +8,9 @@ The various methods can be called using the function `padjust`.
 `padjust` also accepts the method `:none`. This is also the default method, if no method parameter is set.
 Please refer to the [documentation](http://stat.ethz.ch/R-manual/R-patched/library/stats/html/p.adjust.html) of the corresponding function in R or to Wikipedia ([FWER](http://en.wikipedia.org/wiki/Familywise_error_rate), [FDR](http://en.wikipedia.org/wiki/False_discovery_rate)), if you want to know more on this topic.
 
-All methods are tested against the R function [`p.adjust`](http://stat.ethz.ch/R-manual/R-patched/library/stats/html/p.adjust.html).
+Current stable version is [2.0.0](https://github.com/dirkschumacher/PValueAdjust.jl/tree/v2.0.0).
 
-Current stable version is [1.0.0](https://github.com/dirkschumacher/PValueAdjust.jl/tree/v1.0.0).
+In case you find any bugs please post an issue here or send a pull request. Make sure you write a test for your contribution. 
 
 ## Install
 ```jl
@@ -90,7 +90,3 @@ Benjamini, Y., and Yekutieli, D. (2001). The control of the false discovery rate
 Hochberg, Y. (1988). A sharper Bonferroni procedure for multiple tests of significance. Biometrika 75, 800–803. 
 
 Holm, S. (1979). A simple sequentially rejective multiple test procedure. Scandinavian Journal of Statistics 6, 65–70. 
-
-Hommel, G. (1988). A stagewise rejective multiple test procedure based on a modified Bonferroni test. Biometrika 75, 383–386.
-
-Wright, S. P. (1992). Adjusted p-values for simultaneous inference. Biometrics, 48, 1005-1005.

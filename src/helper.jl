@@ -21,7 +21,7 @@ end
 
 macro step_down_adjustment(multiplier, sortedPValues)
   # applies the step down adjustment as e.g. described here:
-  # http://en.wikipedia.org/wiki/Holm%E2%80%93Bonferroni_method#Adjusted_P-value
+  # http://en.wikipedia.org/w/index.php?title=Holm%E2%80%93Bonferroni_method&oldid=615389617#Adjusted_P-value
   # but a bit more efficiently as the array of pValues is ordered
   :(
     for i in 1:n
