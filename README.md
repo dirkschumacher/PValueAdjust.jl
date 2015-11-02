@@ -25,7 +25,7 @@ Pkg.clone("git://github.com/dirkschumacher/PValueAdjust.jl.git")
 #### Bonferroni
 ```jl
 julia > pValues = [0.05, 0.03, 0.01, 0.5]
-julia > padjust(pValues, Bonferroni)
+julia > padjust(pValues, :bonferroni)
 4-element Array{Float64,1}:
  0.2 
  0.12
@@ -36,7 +36,7 @@ julia > padjust(pValues, Bonferroni)
 #### Hochberg
 ```jl
 julia > pValues = [0.05, 0.03, 0.01, 0.5]
-julia > padjust(pValues, Hochberg)
+julia > padjust(pValues, :hochberg)
 4-element Array{Float64,1}:
  0.1 
  0.09
@@ -48,7 +48,7 @@ julia > padjust(pValues, Hochberg)
 Also known as the Holm–Bonferroni method.
 ```jl
 julia > pValues = [0.05, 0.03, 0.01, 0.5]
-julia > padjust(pValues, Holm)
+julia > padjust(pValues, :holm)
 4-element Array{Float64,1}:
  0.1 
  0.09
@@ -60,7 +60,7 @@ julia > padjust(pValues, Holm)
 #### Benjamini-Hochberg
 ```jl
 julia > pValues = [0.05, 0.03, 0.01, 0.5]
-julia > padjust(pValues, BenjaminiHochberg)
+julia > padjust(pValues, :benjaminiHochberg)
 4-element Array{Float64,1}:
  0.0666667
  0.06     
@@ -70,7 +70,7 @@ julia > padjust(pValues, BenjaminiHochberg)
 #### Benjamini-Hochberg-Yekutieli
 ```jl
 julia > pValues = [0.05, 0.03, 0.01, 0.5]
-julia > padjust(pValues, BenjaminiYekutieli)
+julia > padjust(pValues, :benjaminiYekutieli)
 4-element Array{Float64,1}:
  0.138889 
  0.125    
