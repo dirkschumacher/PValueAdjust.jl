@@ -35,7 +35,7 @@ macro step_down_adjustment(multiplier, sortedPValues)
 end
 
 function order(vector)
-  indexes = [1:length(vector)]
+  indexes = collect(1:length(vector))
   sortedIndexes = sort(indexes, by = (i) -> vector[i])
   sortedIndexes
 end
