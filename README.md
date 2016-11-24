@@ -3,7 +3,7 @@
 [![PValueAdjust](http://pkg.julialang.org/badges/PValueAdjust_release.svg)](http://pkg.julialang.org/?pkg=PValueAdjust&ver=release)
 # PValueAdjust.jl
 
-*This package has been deprecated in favor of [MultipleTesting.jl](https://github.com/juliangehring/MultipleTesting.jl).*
+*This package has been deprecated in favor of [MultipleTesting.jl](https://github.com/juliangehring/MultipleTesting.jl). Please use that package instead.*
 
 Some methods to adjust p-values for multiple comparisons in Julia.
 The various methods can be called using the function `padjust`. 
@@ -16,7 +16,7 @@ In case you find any bugs please post an issue here or send a pull request. Make
 
 
 ## Install
-This package has been deprecated in favor of [MultipleTesting.jl](https://github.com/juliangehring/MultipleTesting.jl).
+This package has been deprecated in favor of [MultipleTesting.jl](https://github.com/juliangehring/MultipleTesting.jl). Please use that package instead.
 
 ## Methods 
 ### Control the familywise error rate ([FWER](http://en.wikipedia.org/wiki/Familywise_error_rate))
